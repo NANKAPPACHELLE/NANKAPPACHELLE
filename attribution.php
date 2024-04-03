@@ -1,6 +1,5 @@
 <?php
 // Connexion à la base de données
-include("connexion_bd.php");
 
 // Fonction pour attribuer un chauffeur à une voiture et à un itinéraire
 function attribuer_Chauffeur() {
@@ -8,6 +7,7 @@ function attribuer_Chauffeur() {
 
     try {
         // Vérifier si le chauffeur, la voiture et l'itinéraire existent dans la base de données
+        include("connexion_bd.php");
         $stmt = $db->prepare("SELECT * FROM chauffeur WHERE id = :idChauffeur");
         $stmt->bindParam(':idChauffeur', $idChauffeur);
         $stmt->execute();

@@ -1,33 +1,36 @@
 <?php
 session_start();
-$pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
-$db=new PDO('mysql:host=localhost;dbname=la difference','root','',$pdo_options);
-$db -> exec("SET NAMES'utf8'");
-if(isset($_POST['envoi'])){
-    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){    
-       $pseudo=htmlspecialchars($_POST["pseudo"]);
-       $mdp=sha1($_POST['mdp']); 
-       $sql=$db->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
-       $sql->execute(array($pseudo, $mdp));
-          if($sql->rowCount() > 0){ 
-             $_SESSION["pseudo"] = $pseudo;
-             $_SESSION["mdp"] = $mdp;
-             $_SESSION["id"] = $sql->fetch()["id"];
-             header['Location: index.php'];
+$pdo_options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+$db = new PDO('mysql:host=localhost;dbname=la_difference', 'root', '', $pdo_options);
+$db->exec("SET NAMES'utf8'");
 
-        }else{
-            echo"veuillez completer tous les champs...";
+if (isset($_POST['envoi'])) {
+    if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
+        $pseudo = htmlspecialchars($_POST["pseudo"]);
+        $mdp = sha1($_POST['mdp']); // Note: Utiliser sha1 pour le hachage du mot de passe n'est plus recommandé. Considérez d'autres méthodes plus sécurisées.
+
+        $sql = $db->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
+        $sql->execute(array($pseudo, $mdp));
+
+        if ($sql->rowCount() > 0) {
+            $_SESSION["pseudo"] = $pseudo;
+            $_SESSION["mdp"] = $mdp;
+            $_SESSION["id"] = $sql->fetch()["id"];
+            header('Location: index.php');
+            exit;
+        } else {
+            echo "Veuillez compléter tous les champs...";
         }
-    }else{
-        echo"veuillez completer tous les champs...";
+    } else {
+        echo "Veuillez compléter tous les champs...";
     }
-}   
+}
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>connexion</title>
+    <title>Connexion</title>
     <meta charset="utf-8">
 </head>
 <body>
@@ -37,6 +40,6 @@ if(isset($_POST['envoi'])){
         <input type="password" name="mdp" autocomplete="off">
         <br><br>
         <input type="submit" name="envoi">
-</form>
+    </form>
 </body>
 </html>

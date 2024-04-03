@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- ========= APP DELEOPPER PAR KEVINE ========= -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Pemium Hotel</title>
+
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="profile">
+            <span class="material-icons-outlined">account_circle</span>
+            <h5>Bienvenue, Kevine</h5>
+          </span>
+          <button><span class="material-icons-outlined">email</span></button>
+          <button>
+            <span class="material-icons-outlined">notifications</span>
+          </button>
+          <button><span class="material-icons-outlined">search</span></button>
+        </div>
+        <div class="header-right">
+          <span class="logout">
+            <a href="#">
+              <h2 class="white">Déconnexion</h2>
+              <span class="material-icons-outlined white">logout</span>
+            </a>
+          </span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img
+              src="./images/LOGO PREMIUM.jpg"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <span>PREMIUM HOTEL</span>
+          </div>
+          <!-- <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          > -->
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Tableau de
+              bord
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">inventory_2</span> Matériels
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">category</span> Câtegories
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">groups</span> Employes
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">fact_check</span> Tâches
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">poll</span> Réquettes
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">home</span> Gestion des
+              chambres
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span> Gestion des
+              dependences
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>tableau de bord</h2>
+        </div>
+
+        <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <h3>MATÉRIELS</h3>
+              <!-- <span class="material-icons-outlined">inventory_2</span> -->
+              <span class="material-icons-outlined">add</span>
+            </div>
+            <!-- <h1>249</h1> -->
+            <h1>0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>CATÉGORIES</h3>
+              <!-- <span class="material-icons-outlined">category</span> -->
+              <span class="material-icons-outlined">add</span>
+            </div>
+            <!-- <h1>25</h1> -->
+            <h1>0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>EMPLOYES</h3>
+              <!-- <span class="material-icons-outlined">groups</span> -->
+              <span class="material-icons-outlined">add</span>
+            </div>
+            <!-- <h1>1500</h1> -->
+            <h1>0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>CHAMBRE</h3>
+              <!-- <span class="material-icons-outlined"
+                >notification_important</span
+              > -->
+              <span class="material-icons-outlined">add</span>
+            </div>
+            <!-- <h1>56</h1> -->
+            <h1>0</h1>
+          </div>
+        </div>
+
+        <div class="charts">
+          <div class="charts-card">
+            <h2 class="chart-title"></h2>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title"></h2>
+          </div>
+        </div>
+      </main>
+      <!-- End Main -->
+    </div>
+
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+    <script src="./js/fontawesome.js"></script>
+  </body>
+  <!-- ========= APP DELEOPPER PAR KEVINE ========= -->
+</html>

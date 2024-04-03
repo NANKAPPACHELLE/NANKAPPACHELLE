@@ -2,7 +2,7 @@
 <ul id="MenuBar1" class="MenuBarHorizontal">
   <li><a class="MenuBarItemSubmenu" href="#">Fichier</a>
       <ul>
-	<li><a href="#">UTILISATEUR</a></li>
+	<li><a href="#">utilisateur</a></li>
               <li><a href="#">Quitter </a></li>
         <li><a href="#">Commande ficier 3</a></li>
       </ul>
@@ -16,7 +16,8 @@
         <li><a href="itineraire.php">itineraire</a></li>
          <li><a href="point_arret.php">point_arret</a></li>
          <li><a href="eleve.php">eleve</a></li>
-
+          <li><a href="attribution.php">attribution</a></li>
+           <li><a href="quartier.php">quartier</a></li>
       </ul>
   </li>
 
